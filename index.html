@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="exchange-row">
+      <select id="from-currency"></select>
+      <input type="number" id="from-amount" placeholder="Amount" />
+      <span>→</span>
+      <select id="to-currency"></select>
+      <input type="number" id="to-amount" placeholder="Amount" />
+    </div>
+
+    <div class="exchange-row">
+      <div id="from-country-info" class="country-info">
+        From country info will appear here
+      </div>
+      <div id="to-country-info" class="country-info">
+        To country info will appear here
+      </div>
+    </div>
+  </body>
+</html>
