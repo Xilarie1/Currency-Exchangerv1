@@ -61,3 +61,26 @@ input {
   font-size: 1.5rem;
   margin: 0 10px;
 }
+
+/* Mobile-friendly layout */
+@media (max-width: 600px) {
+  .exchange-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  select,
+  input {
+    width: 100%;
+  }
+
+  .arrow {
+    margin: 0 auto;
+  }
+
+  .country-info {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
