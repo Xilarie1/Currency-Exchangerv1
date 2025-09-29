@@ -186,6 +186,23 @@ toSelect.addEventListener("change", () => {
   convertLeftToRight();
 });
 
+const swapButton = document.getElementById("swap-button");
+
+swapButton.addEventListener("click", () => {
+  // Swap selected currencies
+  const tempCurrency = fromSelect.value;
+  fromSelect.value = toSelect.value;
+  toSelect.value = tempCurrency;
+
+  // Don't swap amounts! Just recalc them
+  updateDropdownDisable();
+  updateCountryInfo("from");
+  updateCountryInfo("to");
+
+  // Recalculate amount based on the new selection
+  convertLeftToRight();
+});
+
 fromAmount.addEventListener("input", convertLeftToRight);
 toAmount.addEventListener("input", convertRightToLeft);
 
