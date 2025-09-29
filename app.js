@@ -154,6 +154,14 @@ async function convertLeftToRight() {
   toAmount.value = ((amount * toRate) / fromRate).toFixed(2);
 }
 
+async function convertRightToLeft() {
+  const rates = await getRates();
+  const amount = parseFloat(toAmount.value) || 0;
+  const fromRate = rates[fromSelect.value];
+  const toRate = rates[toSelect.value];
+  fromAmount.value = ((amount * fromRate) / toRate).toFixed(2);
+}
+
 function updateDropdownDisable() {
   const fromVal = fromSelect.value;
   const toVal = toSelect.value;
@@ -179,6 +187,6 @@ toSelect.addEventListener("change", () => {
 });
 
 fromAmount.addEventListener("input", convertLeftToRight);
-toAmount.addEventListener("input", convertLeftToRight);
+toAmount.addEventListener("input", convertRightToLeft);
 
 populateDropdowns();
