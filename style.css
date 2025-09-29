@@ -20,6 +20,13 @@ body {
   max-width: 900px;
   margin: auto;
 }
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
 .exchange-row {
   display: flex;
   align-items: center;
